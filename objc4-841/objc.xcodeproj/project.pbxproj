@@ -48,6 +48,9 @@
 		393CEAC60DC69E67000B69DE /* objc-references.h in Headers */ = {isa = PBXBuildFile; fileRef = 393CEAC50DC69E67000B69DE /* objc-references.h */; };
 		39ABD72312F0B61800D1054C /* objc-weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 39ABD71F12F0B61800D1054C /* objc-weak.h */; };
 		39ABD72412F0B61800D1054C /* objc-weak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39ABD72012F0B61800D1054C /* objc-weak.mm */; };
+		3E1FB6E628CB347900B22643 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1FB6E428CB347900B22643 /* Test.cpp */; };
+		3E25EF2128BF612800866696 /* MyClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E25EF2028BF612800866696 /* MyClass.mm */; };
+		3EEB249528D4679700B4B0A3 /* MySubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB249428D4679700B4B0A3 /* MySubClass.m */; };
 		6E1475EA21DFDB1B001357EA /* llvm-AlignOf.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1475E521DFDB1A001357EA /* llvm-AlignOf.h */; };
 		6E1475EB21DFDB1B001357EA /* llvm-DenseMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1475E621DFDB1B001357EA /* llvm-DenseMap.h */; };
 		6E1475EC21DFDB1B001357EA /* llvm-DenseMapInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1475E721DFDB1B001357EA /* llvm-DenseMapInfo.h */; };
@@ -228,6 +231,13 @@
 		393CEAC50DC69E67000B69DE /* objc-references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-references.h"; path = "runtime/objc-references.h"; sourceTree = "<group>"; };
 		39ABD71F12F0B61800D1054C /* objc-weak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-weak.h"; path = "runtime/objc-weak.h"; sourceTree = "<group>"; };
 		39ABD72012F0B61800D1054C /* objc-weak.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "objc-weak.mm"; path = "runtime/objc-weak.mm"; sourceTree = "<group>"; };
+		3E1FB6E428CB347900B22643 /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		3E1FB6E528CB347900B22643 /* Test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
+		3E25EF1F28BF612800866696 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		3E25EF2028BF612800866696 /* MyClass.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyClass.mm; sourceTree = "<group>"; };
+		3EEB249328D4679700B4B0A3 /* MySubClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySubClass.h; sourceTree = "<group>"; };
+		3EEB249428D4679700B4B0A3 /* MySubClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySubClass.m; sourceTree = "<group>"; };
+		3EF73C7629091357009B3BEF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E1475E521DFDB1A001357EA /* llvm-AlignOf.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = "llvm-AlignOf.h"; path = "runtime/llvm-AlignOf.h"; sourceTree = "<group>"; tabWidth = 2; };
 		6E1475E621DFDB1B001357EA /* llvm-DenseMap.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = "llvm-DenseMap.h"; path = "runtime/llvm-DenseMap.h"; sourceTree = "<group>"; tabWidth = 2; };
 		6E1475E721DFDB1B001357EA /* llvm-DenseMapInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = "llvm-DenseMapInfo.h"; path = "runtime/llvm-DenseMapInfo.h"; sourceTree = "<group>"; tabWidth = 2; };
@@ -388,6 +398,12 @@
 			isa = PBXGroup;
 			children = (
 				04063FFE2862F55300EB54EA /* main.m */,
+				3E25EF1F28BF612800866696 /* MyClass.h */,
+				3E25EF2028BF612800866696 /* MyClass.mm */,
+				3EEB249328D4679700B4B0A3 /* MySubClass.h */,
+				3EEB249428D4679700B4B0A3 /* MySubClass.m */,
+				3E1FB6E428CB347900B22643 /* Test.cpp */,
+				3E1FB6E528CB347900B22643 /* Test.hpp */,
 			);
 			path = KCObjcBuild;
 			sourceTree = "<group>";
@@ -441,6 +457,7 @@
 				83725F4914CA5BFA0014370E /* objc-opt.mm */,
 				831C85D40E10CF850066E64C /* objc-os.mm */,
 				393CEABF0DC69E3E000B69DE /* objc-references.mm */,
+				83D49E4E13C7C84F0057F1DD /* objc-msg-arm64.s */,
 				838485E10D6D68A200CEA253 /* objc-runtime-new.mm */,
 				838485E20D6D68A200CEA253 /* objc-runtime-old.mm */,
 				838485E40D6D68A200CEA253 /* objc-runtime.mm */,
@@ -455,7 +472,6 @@
 				E8923D9C116AB2820071B552 /* objc-blocktramps-i386.s */,
 				E8923D9D116AB2820071B552 /* objc-blocktramps-x86_64.s */,
 				830F2A690D737FB800392440 /* objc-msg-arm.s */,
-				83D49E4E13C7C84F0057F1DD /* objc-msg-arm64.s */,
 				830F2A6A0D737FB800392440 /* objc-msg-i386.s */,
 				83B1A8BC0FF1AC0D0019EA5B /* objc-msg-simulator-i386.s */,
 				83C9C3381668B50E00F4E544 /* objc-msg-simulator-x86_64.s */,
@@ -565,6 +581,7 @@
 				6E1475E721DFDB1B001357EA /* llvm-DenseMapInfo.h */,
 				6ECD0B1E2244999E00910D88 /* llvm-DenseSet.h */,
 				6E1475E921DFDB1B001357EA /* llvm-MathExtras.h */,
+				75A95052202BAC4100D7D56F /* objc-lockdebug.h */,
 				6E1475E821DFDB1B001357EA /* llvm-type_traits.h */,
 				C2E6D3FB2225DCF00059DFAA /* DenseMapExtras.h */,
 				6E7B0861232DE7CA00689009 /* PointerUnion.h */,
@@ -578,7 +595,6 @@
 				838485D40D6D68A200CEA253 /* objc-initialize.h */,
 				838485D90D6D68A200CEA253 /* objc-loadmethod.h */,
 				75A9504E202BAA0300D7D56F /* objc-locks-new.h */,
-				75A95052202BAC4100D7D56F /* objc-lockdebug.h */,
 				75A95050202BAA9A00D7D56F /* objc-locks.h */,
 				7593EC57202248DF0046AB96 /* objc-object.h */,
 				831C85D30E10CF850066E64C /* objc-os.h */,
@@ -606,6 +622,7 @@
 		F9BCC72A205C6A1600DD9AFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EF73C7629091357009B3BEF /* CoreFoundation.framework */,
 				6EF877E42325FAC400963DBB /* Foundation.framework */,
 				6EF877E12325D93200963DBB /* Symbolication.framework */,
 				6EF877DF2325D92E00963DBB /* CoreSymbolication.framework */,
@@ -872,6 +889,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04063FFF2862F55300EB54EA /* main.m in Sources */,
+				3E1FB6E628CB347900B22643 /* Test.cpp in Sources */,
+				3EEB249528D4679700B4B0A3 /* MySubClass.m in Sources */,
+				3E25EF2128BF612800866696 /* MyClass.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,7 +1042,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1075,7 +1095,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1293,6 +1313,7 @@
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				OTHER_CFLAGS = "";
 				"OTHER_CFLAGS[arch=x86_64]" = "-fobjc-legacy-dispatch";
 				OTHER_CPLUSPLUSFLAGS = (
@@ -1340,6 +1361,7 @@
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.2;
 				OTHER_CFLAGS = "-momit-leaf-frame-pointer";
 				"OTHER_CFLAGS[arch=x86_64]" = (
 					"-momit-leaf-frame-pointer",
